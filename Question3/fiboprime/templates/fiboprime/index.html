@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N Value</title>
+    <link rel="stylesheet" href="{% static "fiboprime/styles.css" %}" />
+</head>
+<body>
+<div class="main-container" >
+    <div class="box">
+        <div class="container">
+            <form method="POST" action="/nvalue">
+                {% csrf_token %}
+                <label for="fname"><h4>Enter N Value: </h4></label>
+                <input type="text" id="fn" name="nvalue">
+                <button type="submit">Submit</button>
+            </form>
+        <div class="buttons-container">
+        <button type="button" class="prime" ><a href="http://127.0.0.1:8000/prime">Prime Numbers</a></button> 
+        <button type="button" class="fibo"><a href="http://127.0.0.1:8000/fibo" >Fibonaaci Series</a></button>
+    </div>
+</div>
+</div>
+</body>
+</html>
