@@ -12,16 +12,23 @@
 <div class="main-container" >
     <div class="box">
         <div class="container">
-            <form method="POST" action="/nvalue">
+            <form method="POST" action="/prime">
                 {% csrf_token %}
                 <label for="fname"><h4>Enter N Value: </h4></label>
                 <input type="text" id="fn" name="nvalue">
-                <button type="submit">Submit</button>
+                <!-- <button type="submit">Submit</button> -->
+                <button type="submit" class="prime" >Prime Numbers</button>
+                
             </form>
-        <div class="buttons-container">
-        <button type="button" class="prime" ><a href="http://127.0.0.1:8000/prime">Prime Numbers</a></button> 
-        <button type="button" class="fibo"><a href="http://127.0.0.1:8000/fibo" >Fibonaaci Series</a></button>
-    </div>
+            <form method="POST" action="/fibo">
+                {% csrf_token %}
+                <input type="text" id="fn" name="nvalue">
+                <button type="submit" class="fibo">Fibonaaci Series</button>
+            </form>
+        <!-- <div class="buttons-container">
+         
+        
+    </div> -->
 </div>
 </div>
 </body>
