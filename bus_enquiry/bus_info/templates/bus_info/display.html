@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    All Buses
+    <h1>Bus Details</h1>
+   <table>
+    <thead style="background-color: blue;color: white;">
+    <td>BUS ID </td>
+    <td>BUS TYPE</td>
+    <td>SOURCE </td>
+    <td>DESTINATION </td>
+    <!-- <td>STOPS &nbsp;&nbsp;&nbsp;</td> -->
+    <td>STARTING AT</td> 
+    <td>WILLREACHAT</td>
+    <td>STOPS</td>
+    <td>DRIVER NAME </td>
+    <td>CONDUCTOR NAME </td>
+
+
+    </thead>
+
+    {%  for object in form %}
+    <tr>
+        <td>{{object.busid}}</td>
+        <td>{{object.bustype}}</td>
+        <td>{{object.source}}</td>
+        <td>{{object.destination}}</td>    
+        <td>{{object.startingat}}</td>
+        <td>{{object.willreachat}}</td>
+        <td>{{object.stops}}</td>
+        <td>{{object.drivername}}</td>
+        <td>{{object.conductorname}}</td>
+    </tr>
+    {% endfor %}
+</table>
+       
+  </body>
+</body>
+</html>

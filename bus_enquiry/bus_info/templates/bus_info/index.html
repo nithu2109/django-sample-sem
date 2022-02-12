@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Enquiry System</title>
+    <link rel="stylesheet" href="{% static "bus_info/styles.css" %}">
+</head>
+<body>
+    <div>
+        <h1>
+            Bus Enquiry System
+        </h1>
+        <ul>
+            <li>
+                 <a href="{% url 'display' %}">Get All Buses Information</a>
+            </li>
+            <li>
+                <a>Find Bus Details</a>
+            </li>
+        </ul>
+        
+        
+    </div>
+    
+</body>
+</html>
